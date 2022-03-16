@@ -89,7 +89,7 @@ func main() {
 		for logParts := range channel {
 			//fmt.Println(logParts)
 			//map[client:192.168.61.254:514 content:UDPv4 WRITE [85] to [AF_INET]219.232.205.138:1194: P_DATA_V1 kid=4 DATA len=84
-			//facility:3 hostname:wangjinhui-nx2 priority:29 severity:5 tag:openvpn timestamp:2019-12-15 19:11:14 +0000 UTC tls_peer:]
+			//facility:3 hostname:nx2 priority:29 severity:5 tag:openvpn timestamp:2019-12-15 19:11:14 +0000 UTC tls_peer:]
 			msg := fmt.Sprintf("%s|%s^%s^%s", time.Now().Format("2006-01-02T15:04:05"), logParts["timestamp"], logParts["tag"], logParts["content"])
 
 			//拆分客户端信息logParts["client"]
